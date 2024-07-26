@@ -11,20 +11,26 @@
                 Console.Clear();
                 Console.WriteLine("ConsoleUmrechnungDatentypten \n");
 
+                // methode GetSizeInGiB
                 Console.WriteLine("{1,-40} = {0,20:N3} GiB", GetSizeInGiB(53546856464864),  "GetSizeInGiB(53546856464864)");
                 Console.WriteLine("{1,-40} = {0,20:N3} GiB", GetSizeInGiB(5354685644),      "GetSizeInGiB(5354685644)");
                 Console.WriteLine("{1,-40} = {0,20:N3} GiB", GetSizeInGiB(5464864),         "GetSizeInGiB(5464864)");
                 Console.WriteLine("{1,-40} = {0,20:N3} GiB", GetSizeInGiB(1024*1024*1024),  "GetSizeInGiB(1024*1024*1024)");
                 Console.WriteLine();
+
+                // methode GetSizeInGib
                 Console.WriteLine("{1,-40} = {0,20:N3} KB",  GetSize("KB", 1024 * 1024),    "GetSize(\"KB\", 1024 * 1024)");
                 Console.WriteLine("{1,-40} = {0,20:N3} KiB", GetSize("KiB", 1024 * 1024),   "GetSize(\"KiB\", 1024 * 1024)");
+                Console.WriteLine();
 
+                // array an methode übergeben
                 int[] sample1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
                 int[] sample2 = { 100, 200, 300, 400, 500, 600, 70, 8, 9, 10 };
 
+                Console.WriteLine("BerechneSumme1: " + BerechneSumme(sample1));
+                Console.WriteLine("BerechneSumme1: " + BerechneSumme(sample2));
 
-                //Console.WriteLine("BerechneSumme: " + BerechneSumme());
-
+                // programm beenden oder weiter fortsetzen?
                 Console.Write("\n\nProgramm beenden (e)? ");
                 try {
                     string exitApp = Console.ReadLine();
